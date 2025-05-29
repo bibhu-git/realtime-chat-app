@@ -14,7 +14,7 @@ app.use(express.json());
 dotenv.config();
 const port = process.env.PORT || 4000;
 // connect to mongodb database
-mongoose.connect('mongodb+srv://Bibhu:Bibhu123@cluster0.kjnc1zx.mongodb.net/chatApp')
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
     console.log("MongoDB connected..");
 })
